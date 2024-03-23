@@ -38,3 +38,9 @@ rm -rf "${XDG_CONFIG_HOME}/zsh/scripts"
 ln -sf "${DOTFILES}/zsh/scripts" "${XDG_CONFIG_HOME}/zsh"
 rm -rf "${XDG_CONFIG_HOME}/zsh/configs"
 ln -sf "${DOTFILES}/zsh/configs" "${XDG_CONFIG_HOME}/zsh"
+
+############
+# zsh-abbr #
+############
+rm -rf "${XDG_CONFIG_HOME}/zsh-abbr"
+ln -sf "${DOTFILES}/zsh-abbr" "${XDG_CONFIG_HOME}"

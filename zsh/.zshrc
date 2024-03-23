@@ -29,6 +29,16 @@ function() {
   fi
 }
 
+########
+# ABBR #
+########
+function() {
+  local script='/usr/share/zsh/plugins/zsh-abbr/zsh-abbr.zsh'
+  if [[ -f "${script}" ]]; then
+    source "${script}"
+  fi
+}
+
 #############
 # DIR STACK #
 #############
