@@ -1,0 +1,57 @@
+general {
+    interval = 1
+    output_format = i3bar
+    colors = true
+    color_good="#c5c8c6"
+    color_degraded="#de935f"
+    color_bad="#cc6666"
+    markup = pango
+}
+
+order += "volume master"
+order += "battery 0"
+order += "disk /"
+order += "cpu_usage"
+order += "memory"
+order += "wireless _first_"
+order += "tztime local"
+
+volume master {
+    format = "  %volume"
+    format_muted = "  %volume"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+battery 0 {
+    format = " %status %percentage "
+    format_down = "  "
+    status_chr = "  "
+    status_bat = "  "
+    status_unk = "  "
+    status_full = "  "
+    path = "/sys/class/power_supply/BAT%d/uevent"
+}
+
+disk "/" {
+    prefix_type = decimal
+    format = "   %avail"
+}
+
+cpu_usage {
+    format = "   %usage"
+}
+
+memory {
+    format = " 󰍛 %used/%total"
+}
+
+wireless _first_ {
+    format_up = " <span color='#b5bd68'>󰤨 </span> %essid%quality"
+    format_down = " <span color='#cc6666'>󰤮 </span>"
+}
+
+tztime local {
+    format = "   %Y-%m-%d %H:%M:%S"
+}
