@@ -19,6 +19,16 @@ function () {
   fi
 }
 
+###################
+# AUTOSUGGESTIONS #
+###################
+function() {
+  local script="/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  if [[ -f "${script}" ]]; then
+    source "${script}"
+  fi
+}
+
 #############
 # DIR STACK #
 #############
