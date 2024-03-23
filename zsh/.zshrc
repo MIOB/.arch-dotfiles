@@ -41,6 +41,13 @@ if [[ $(command -v "fzf") ]]; then
     source /usr/share/fzf/key-bindings.zsh
 fi
 
+##########
+# ZOXIDE #
+##########
+if [[ $(command -v "zoxide") ]]; then
+  eval "$(zoxide init zsh)"
+fi
+
 ###########
 # GIT GPG #
 ###########
