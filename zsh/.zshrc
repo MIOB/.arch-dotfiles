@@ -9,6 +9,16 @@ function () {
   done
 }
 
+#######################
+# SYNTAX HIGHLIGHTING #
+#######################
+function () {
+  local script='/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+  if [[ -f "${script}" ]]; then
+    source "${script}"
+  fi
+}
+
 #############
 # DIR STACK #
 #############
