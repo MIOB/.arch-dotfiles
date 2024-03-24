@@ -50,3 +50,9 @@ ln -sf "${DOTFILES}/zsh-abbr" "${XDG_CONFIG_HOME}"
 #############
 rm -rf "${XDG_CONFIG_HOME}/alacritty"
 ln -sf "${DOTFILES}/alacritty" "${XDG_CONFIG_HOME}"
+
+#########
+# dunst #
+#########
+mkdir -p "${XDG_CONFIG_HOME}/dunst"
+ln -sf "${DOTFILES}/dunst/dunstrc" "${XDG_CONFIG_HOME}/dunst/"
