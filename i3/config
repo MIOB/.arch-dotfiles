@@ -85,7 +85,6 @@ mode "$mode_system" {
 bar {
   status_command i3status 
   separator_symbol "┃"
-  tray_output primary
 
   colors {
     background $black2
@@ -166,12 +165,16 @@ mode "resize" {
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [class="Arandr"] floating enable
+for_window [window_role="WM_WINDOW_ROLE"] floating enable 
+
+floating_maximum_size 2048 x 2048
+
 
 ##########
 # DESIGN #
 ##########
 
-exec --no-startup-id feh --no-fehbg --bg-fill ~/.config/i3/wallpapers/wallpaper.jpg
+exec --no-startup-id feh --no-fehbg --bg-fill ~/.config/i3/wallpapers/4k-Arch-Dark-Background.png
 
 set_from_resource $foreground foreground #C6C6C6
 set_from_resource $background background #1d1f21
