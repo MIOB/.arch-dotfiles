@@ -56,3 +56,9 @@ ln -sf "${DOTFILES}/alacritty" "${XDG_CONFIG_HOME}"
 #########
 mkdir -p "${XDG_CONFIG_HOME}/dunst"
 ln -sf "${DOTFILES}/dunst/dunstrc" "${XDG_CONFIG_HOME}/dunst/"
+
+##########
+# ranger #
+##########
+mkdir -p "${XDG_CONFIG_HOME}/ranger"
+ln -sf "${DOTFILES}/ranger/"* "${XDG_CONFIG_HOME}/ranger"
