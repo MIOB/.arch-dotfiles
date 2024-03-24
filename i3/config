@@ -158,6 +158,13 @@ mode "resize" {
   bindsym $mod+r mode "default"
 }
 
+###############
+# SCREENSHOTS #
+###############
+
+bindsym --release Print exec --no-startup-id scrot "${HOME}/Screenshots/%Y-%m-%d-%T%z.png"
+bindsym --release Shift+Print exec --no-startup-id scrot --select -f "${HOME}/Screenshots/%Y-%m-%d-%T%z.png" 
+
 ###################
 # SPECIAL WINDOWS #
 ###################
