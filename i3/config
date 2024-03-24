@@ -1,5 +1,7 @@
 set $mod Mod4
 
+exec --no-startup-id dunst
+
 font pango:Inconsolata LGC Nerd Font 12
 
 floating_modifier $mod
