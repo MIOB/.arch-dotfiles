@@ -1,0 +1,10 @@
+import = [
+	"~/.config/alacritty/themes/miob.toml",
+]
+shell = "/usr/bin/zsh"
+live_config_reload = true
+ipc_socket = true
+
+[window]
+padding = { x = 1 }
+dynamic_padding = true

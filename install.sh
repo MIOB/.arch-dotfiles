@@ -44,3 +44,9 @@ ln -sf "${DOTFILES}/zsh/configs" "${XDG_CONFIG_HOME}/zsh"
 ############
 rm -rf "${XDG_CONFIG_HOME}/zsh-abbr"
 ln -sf "${DOTFILES}/zsh-abbr" "${XDG_CONFIG_HOME}"
+
+#############
+# alacritty #
+#############
+rm -rf "${XDG_CONFIG_HOME}/alacritty"
+ln -sf "${DOTFILES}/alacritty" "${XDG_CONFIG_HOME}"
