@@ -62,3 +62,10 @@ ln -sf "${DOTFILES}/dunst/dunstrc" "${XDG_CONFIG_HOME}/dunst/"
 ##########
 mkdir -p "${XDG_CONFIG_HOME}/ranger"
 ln -sf "${DOTFILES}/ranger/"* "${XDG_CONFIG_HOME}/ranger"
+
+########
+# nvim #
+########
+mkdir -p "${XDG_CONFIG_HOME}/nvim"
+mkdir -p "${XDG_DATA_HOME}/nvim/undo"
+ln -sf "${DOTFILES}/nvim/init.vim" "${XDG_CONFIG_HOME}/nvim"
