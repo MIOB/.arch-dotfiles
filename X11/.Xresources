@@ -1,1 +1,45 @@
 Xft.dpi:192
+
+! Primary colors
+*.foreground: #d8d8d8
+*.background: #181818
+
+! Normal colors
+*.color0:  #181818
+*.color1:  #ac4242
+*.color2:  #90a959
+*.color3:  #f4bf75
+*.color4:  #6a9fb5
+*.color5:  #aa759f
+*.color6:  #75b5aa
+*.color7:  #d8d8d8
+
+! Bright colors
+*.color8:  #6b6b6b
+*.color9:  #c55555
+*.color10: #aac474
+*.color11: #feca88
+*.color12: #82b8c8
+*.color13: #c28cb8
+*.color14: #93d3c3
+*.color15: #f8f8f8
+
+
+URxvt*font: xft:JetBrainsMono Nerd Font:size=12
+URxvt*boldFont: xft:JetBrainsMono Nerd Font:style=Bold:size=12
+URxvt*italicFont: xft:JetBrainsMono Nerd Font:style=Italic:size=12
+URxvt*boldItalicfont: xft:JetBrainsMono Nerd Font:style=Italic Bold:size=12
+
+URxvt*borderLess: false
+URxvt*externalBorder: 0
+URxvt*internalBorder: 4
+URxvt*scrollBar: false
+URxvt*saveLines: 5000
+Urxvt*lineSpace: 1.2
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.keysym.Control-Shift-C: eval:selection_to_clipboard
+URxvt.keysym.Control-Shift-V: eval:paste_clipboard
+
+
