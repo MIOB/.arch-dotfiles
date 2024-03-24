@@ -50,10 +50,10 @@ bindsym $mod+Shift+Right move right
 #########
 # SOUND #
 #########
-
-bindsym XF86AudioMute exec amixer sset 'Master' toggle
-bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
-bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
+set $volume ~/.config/i3/scripts/volume.sh
+bindsym XF86AudioMute exec --no-startup-id $volume toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id $volume down
+bindsym XF86AudioRaiseVolume exec --no-startup-id $volume up
 
 ##########
 # SYSTEM #
@@ -178,6 +178,10 @@ for_window [window_role="WM_WINDOW_ROLE"] floating enable
 
 floating_maximum_size 2048 x 2048
 
+#########
+# OTHER #
+#########
+bindsym CTRL+Shift+Mod1+Q exec --no-startup-id ~/.config/i3/scripts/touchpad_toggle.sh
 
 ##########
 # DESIGN #

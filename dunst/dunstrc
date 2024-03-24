@@ -1,41 +1,34 @@
 [global]
-    font = Inconsolata LGC Nerd Font 13
-    icon_position = left
-    allow_markup = yes
-    format = "<b>%s</b>\n%b"
+    width = 300
+    height = 600
+    origin = top-right
+    offset = 20x20
+
+    progress_bar = true
+    progress_bar_height = 10
+
+    separator_height = 2
+    horizontal_padding = 8
+    separator_color = "#444444"
+    stack_duplicates = true
 
     sort = yes
-    indicate_hidden = no
-    alignment = center
-    bounce_freq = 0
-    show_age_threshold = 60
+
+    font = Inconsolata LGC Nerd Font 16
+    format = "<b>%s</b>\n%b"
+    alignment = left
     word_wrap = yes
     ignore_newline = no
 
-    stack_duplicates = true
-
-    geometry = "300x5-30+20"
-    transparency = 10
+    show_indicators = yes
     idle_threshold = 999
     monitor = 0
- 
-    follow = keyboard
-    #sticky_history = no
 
-    line_height = 0
-    separator_height = 2
-    padding = 8 
-    horizontal_padding = 8
-    separator_color = "#444444"
-    startup_notification = false
+    icon_position = left
 
     dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/firefox -new-tab
- 
-[frame]
-    width = 1
-    color = "#444444"
- 
+    browser = /usr/bin/brave -new-tab
+
 [urgency_low]
     background = "#303030"
     foreground = "#87AF87"
@@ -50,3 +43,19 @@
     background = "#d75f5f"
     foreground = "#303030"
     timeout = 30
+
+[volume_notifier]
+  appname = "volume_notifier"
+  timeout = 1
+  urgency = low
+  set_stack_tag = "volume"
+  background = "#303030"
+  foreground = "#87AF87"
+
+[toucpad_notifier]
+  appname = "touchpad_notifier"
+  timeout = 1
+  urgency = low
+  set_stack_tag = "touchpad"
+  background = "#303030"
+  foreground = "#87AF87"
