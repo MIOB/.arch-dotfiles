@@ -1,1 +1,4 @@
 abbr "k"="kubectl"
+abbr "d"="docker"
+abbr "kctx"="kubectx"
+abbr "kns"="kubens"
