@@ -69,3 +69,11 @@ ln -sf "${DOTFILES}/ranger/"* "${XDG_CONFIG_HOME}/ranger"
 mkdir -p "${XDG_CONFIG_HOME}/nvim"
 mkdir -p "${XDG_DATA_HOME}/nvim/undo"
 ln -sf "${DOTFILES}/nvim/init.vim" "${XDG_CONFIG_HOME}/nvim"
+
+#######
+# gpg #
+#######
+rm -f "${HOME}/.gnupg/gpg-agent.conf"
+mkdir -p "${HOME}/.gnupg"
+ln -sf "${DOTFILES}/gnupg/scripts" "${HOME}/.gnupg/"
+ln -sf "${DOTFILES}/gnupg/gpg-agent.conf" "${HOME}/.gnupg/"

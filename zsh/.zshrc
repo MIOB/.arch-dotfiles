@@ -71,7 +71,10 @@ fi
 ###########
 # GIT GPG #
 ###########
-export GPG_TTY="$(tty)"
+if [[ -t 0 ]]; then
+  export GPG_TTY="$(tty)"
+  export PINENTRY_USER_DATA='curses'
+fi
 
 #############
 # AUTOSTART #
@@ -79,3 +82,4 @@ export GPG_TTY="$(tty)"
 if [[ "$(tty)" = "/dev/tty1" ]]; then
     pgrep i3 || exec startx "${XDG_CONFIG_HOME}/X11/.xinitrc"
 fi
+
