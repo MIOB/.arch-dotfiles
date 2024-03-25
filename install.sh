@@ -77,3 +77,9 @@ rm -f "${HOME}/.gnupg/gpg-agent.conf"
 mkdir -p "${HOME}/.gnupg"
 ln -sf "${DOTFILES}/gnupg/scripts" "${HOME}/.gnupg/"
 ln -sf "${DOTFILES}/gnupg/gpg-agent.conf" "${HOME}/.gnupg/"
+
+#######
+# git #
+#######
+mkdir -p "${XDG_CONFIG_HOME}/git"
+ln -f "${DOTFILES}/git/config" "${XDG_CONFIG_HOME}/git"

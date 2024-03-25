@@ -1,0 +1,10 @@
+[core]
+  editor = nvim
+[user]
+  signingKey = C98809FB9C88F590
+	email = mr.santak@gmail.com
+	name = Mikhail Obidin
+[commit]
+  gpgsign = true
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
