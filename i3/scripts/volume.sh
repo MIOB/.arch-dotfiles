@@ -2,7 +2,7 @@
 set -euo pipefail
 
 function get_volume() {
-  amixer sget Master | grep -o '[0-9]*%' | cut -d'%' -f1
+  amixer sget Master | grep -o '[0-9]*%' | cut -d'%' -f1 | head -n 1
 }
 
 function is_mute() {
