@@ -1,5 +1,5 @@
 [global]
-    width = 300
+    width = (200, 600)
     height = 600
     origin = top-right
     offset = 20x20
@@ -42,7 +42,7 @@
 [urgency_critical]
     background = "#d75f5f"
     foreground = "#303030"
-    timeout = 30
+    timeout = 600
 
 [volume_notifier]
   appname = "volume_notifier"
