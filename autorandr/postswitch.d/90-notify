@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+dunstify 'Display profile' "$AUTORANDR_CURRENT_PROFILE has been enabled" --urgency=low
+

@@ -83,3 +83,9 @@ ln -sf "${DOTFILES}/gnupg/gpg-agent.conf" "${HOME}/.gnupg/"
 #######
 mkdir -p "${XDG_CONFIG_HOME}/git"
 ln -f "${DOTFILES}/git/config" "${XDG_CONFIG_HOME}/git"
+
+#############
+# autorandr #
+#############
+rm -rf "${XDG_CONFIG_HOME}/autorandr"
+ln -sf "${DOTFILES}/autorandr" "${XDG_CONFIG_HOME}"
