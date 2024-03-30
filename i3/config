@@ -71,10 +71,13 @@ bindsym $mod+Shift+r restart
 ###############
 # SYSTEM_MENU #
 ###############
-set $i3lockwall "~/.config/i3/scripts/lock.sh"
+exec_always --no-startup-id xset +dpms dpms 0 900 900 
+exec_always --no-startup-id xss-lock --transfer-sleep-lock -- "$XDG_CONFIG_HOME/i3/scripts/lock.sh"
+
+set $i3lockwall "sleep 1 && xset dpms force standby"
 set $mode_system System (l) lock, (e) logout, (r) reboot, (CTRL+s) shutdown
 
-bindsym $mod+CTRL+Shift+l exec --no-startup-id $i3lockwall
+bindsym --release $mod+CTRL+Shift+l exec --no-startup-id $i3lockwall
 bindsym $mod+Shift+e mode "$mode_system"
 
 mode "$mode_system" {
