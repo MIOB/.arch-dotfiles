@@ -47,6 +47,12 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+##############
+# autolayout #
+##############
+exec_always --no-startup-id i3-autolayout autolayout
+bindsym $mod+t exec i3-autolayout tabmode --file-layout /tmp/i3-autolayout-tabmode.save
+
 #########
 # SOUND #
 #########
@@ -137,6 +143,9 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
+bindsym $mod+Shift+w move workspace to output next
+
 
 ############
 # RESIZING #
