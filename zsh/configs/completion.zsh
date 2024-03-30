@@ -1,5 +1,6 @@
 
 autoload -U compinit; compinit
+autoload -U bashcompinit && bashcompinit
 
 # Autocomplete hidden files
 _comp_options+=(globdots)

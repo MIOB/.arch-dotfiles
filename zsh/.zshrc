@@ -73,7 +73,9 @@ fi
 ###########
 if [[ -t 0 ]]; then
   export GPG_TTY="$(tty)"
-  export PINENTRY_USER_DATA='curses'
+  if [[ "$(tty)" != "/dev/tty1" ]]; then
+    export PINENTRY_USER_DATA='curses'
+  fi
 fi
 
 #############
