@@ -19,3 +19,13 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+
+nnoremap <space> <nop>
+let mapleader = "\<space>"
+
+nnoremap <leader>bn :bnext<cr>
+
+nnoremap <leader>tc :tabnew<cr>
+nnoremap <leader>tq :tabclose<cr>
+nnoremap <leader>tQ :tabonly<cr>
+nnoremap <leader>tn gt
