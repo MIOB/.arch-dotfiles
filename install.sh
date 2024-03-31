@@ -70,6 +70,12 @@ mkdir -p "${XDG_CONFIG_HOME}/nvim"
 mkdir -p "${XDG_DATA_HOME}/nvim/undo"
 ln -sf "${DOTFILES}/nvim/init.vim" "${XDG_CONFIG_HOME}/nvim"
 
+if [[ ! -f "${XDG_CONFIG_HOME}/nvim/autoload/plug.vim" ]]; then
+  curl --fail --location --silent --show-error --create-dirs \
+    --output "${XDG_CONFIG_HOME}/nvim/autoload/plug.vim" \
+    "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+fi
+
 #######
 # gpg #
 #######

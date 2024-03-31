@@ -1,3 +1,6 @@
+call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
+call plug#end()
+
 set clipboard+=unnamedplus
 
 noremap <Up> <Nop>
