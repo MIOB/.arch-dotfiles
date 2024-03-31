@@ -1,4 +1,5 @@
 call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set clipboard+=unnamedplus
@@ -32,3 +33,6 @@ nnoremap <leader>tc :tabnew<cr>
 nnoremap <leader>tq :tabclose<cr>
 nnoremap <leader>tQ :tabonly<cr>
 nnoremap <leader>tn gt
+
+nnoremap <leader>f :Files<cr>
+let g:fzf_action = { 'enter': 'tab-split' }
