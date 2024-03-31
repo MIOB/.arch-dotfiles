@@ -75,6 +75,7 @@ if [[ ! -f "${XDG_CONFIG_HOME}/nvim/autoload/plug.vim" ]]; then
     --output "${XDG_CONFIG_HOME}/nvim/autoload/plug.vim" \
     "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 fi
+nvim --noplugin +PlugUpdate +qa
 
 #######
 # gpg #
