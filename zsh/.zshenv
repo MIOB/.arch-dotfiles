@@ -37,4 +37,6 @@ export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 #########
 
 export DOTFILES="${HOME}/.dotfiles"
-
+if [[ -z "${SSH_CONNECTION}" ]]; then
+    export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+fi
