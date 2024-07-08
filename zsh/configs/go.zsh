@@ -1,2 +1,2 @@
-
-export PATH="$PATH:$HOME/go/bin"
+path+=("$HOME/go/bin")
+export PATH

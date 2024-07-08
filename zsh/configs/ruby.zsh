@@ -1,2 +1,2 @@
-
-export PATH="$PATH:$(gem env path | sed 's#[^:]\+#&/bin#g')"
+path+=( $(gem env path | sed 's#[^:]\+#&/bin#g') )
+export PATH

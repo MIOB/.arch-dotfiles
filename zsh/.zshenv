@@ -36,6 +36,10 @@ export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 # OTHER #
 #########
 
+typeset -U path PATH
+path=("${HOME}/.local/bin" $path)
+export PATH
+
 export DOTFILES="${HOME}/.dotfiles"
 if [[ -z "${SSH_CONNECTION}" ]]; then
     export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
