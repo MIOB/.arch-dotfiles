@@ -82,10 +82,25 @@ bindsym --release $mod+CTRL+Shift+l exec --no-startup-id $i3lockwall
 bindsym $mod+Shift+e mode "$mode_system"
 
 mode "$mode_system" {
-  bindsym l exec --no-startup-id $i3lockwall mode "default"
+  bindsym l exec --no-startup-id $i3lockwall, mode "default"
   bindsym e exec --no-startup-id i3-msg exit, mode "default"
   bindsym r exec --no-startup-id systemctl reboot, mode "default"
   bindsym CTRL+s exec --no-startup-id systemctl poweroff -i, mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+############
+# DISPLAYS #
+############
+set $monitor_sh $XDG_CONFIG_HOME/i3/scripts/monitor.sh
+set $mode_displays Default (d), Home (h)
+
+bindsym $mod+Shift+m mode "$mode_displays"
+
+mode "$mode_displays" {
+  bindsym d exec --no-startup-id "$monitor_sh default", mode "default"
+  bindsym h exec --no-startup-id "$monitor_sh home", mode "default"
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
