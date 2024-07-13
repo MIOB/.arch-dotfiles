@@ -110,7 +110,8 @@ mode "$mode_displays" {
 #########
 
 bar {
-  status_command i3status 
+#  status_command i3status 
+  status_command i3status-rs ~/.dotfiles/i3status-rust/config.toml
   separator_symbol "┃"
 
   colors {
