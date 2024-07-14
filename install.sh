@@ -19,11 +19,11 @@ ln -sf "${DOTFILES}/X11" "${XDG_CONFIG_HOME}"
 rm -rf "${XDG_CONFIG_HOME}/i3"
 ln -sf "${DOTFILES}/i3" "${XDG_CONFIG_HOME}"
 
-############
-# i3status #
-############
-rm -rf "${XDG_CONFIG_HOME}/i3status"
-ln -sf "${DOTFILES}/i3status" "${XDG_CONFIG_HOME}/"
+#################
+# i3status-rust #
+#################
+rm -rf "${XDG_CONFIG_HOME}/i3status-rust"
+ln -sf "${DOTFILES}/i3status-rust" "${XDG_CONFIG_HOME}/"
 
 #######
 # zsh #
