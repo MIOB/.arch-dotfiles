@@ -33,10 +33,6 @@ block = "memory"
 format = " $icon $mem_used.eng(prefix:Mi)/$mem_total.eng(prefix:Mi) "
 
 [[block]]
-block = "nvidia_gpu"
-idle = 60
-
-[[block]]
 block = "net"
 device = "wlp0s20f3"
 format = " $icon $signal_strength $ssid "
