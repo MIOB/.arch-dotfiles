@@ -37,6 +37,23 @@ block = "net"
 device = "wlp0s20f3"
 format = " $icon $signal_strength $ssid "
 
+[[block.click]]
+button = "left"
+cmd = "alacritty --command nmtui"
+[[block.click]]
+button = "right"
+cmd = "alacritty --command bluetuith"
+
+[[block]]
+block = "bluetooth"
+mac = "1C:E6:1D:25:AB:65"
+disconnected_format = ""
+
+[[block]]
+block = "bluetooth"
+mac = "E5:B4:1B:88:85:D6"
+disconnected_format = ""
+
 [[block]]
 block = "time"
 interval = 1
