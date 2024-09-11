@@ -96,3 +96,8 @@ ln -f "${DOTFILES}/git/config" "${XDG_CONFIG_HOME}/git"
 #############
 rm -rf "${XDG_CONFIG_HOME}/autorandr"
 ln -sf "${DOTFILES}/autorandr" "${XDG_CONFIG_HOME}"
+
+############
+# keyboard #
+############
+localectl --no-convert set-x11-keymap eu,ru pc105 , grp:caps_toggle,grp_led:caps
