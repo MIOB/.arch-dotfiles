@@ -4,7 +4,7 @@ function switch_monitor() {
   declare profile="${1:-default}"
   
   declare internal_display="eDP-1"
-  declare -a home_displays=("DVI-I-1-1" "DVI-I-2-2")
+  declare -a home_displays=("DP-4" "DP-2")
   
   declare -a internal_display_mode=(--output "$internal_display" --mode 3840x2400 --rate 59.99)
   declare -a home_displays_mode=(--mode 3840x2160 --rate 60.00)
