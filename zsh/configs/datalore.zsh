@@ -1,6 +1,6 @@
 path=("/home/miob/.datalore/bin" $path)
 export PATH
-export DATALORE_HOME="${HOME}/datalore"
+export DATALORE_HOME="${HOME}/projects/datalore"
 
 eval "$(dl completions)"
 
