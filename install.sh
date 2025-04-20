@@ -7,23 +7,17 @@ readonly XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-${HOME}/.config}"
 readonly XDG_DATA_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}"
 readonly XDG_STATE_HOME="${XDG_STATE_HOME:-${HOME}/.local/state}"
 
-#######
-# X11 #
-#######
-rm -rf "${XDG_CONFIG_HOME}/X11"
-ln -sf "${DOTFILES}/X11" "${XDG_CONFIG_HOME}"
+############
+# hyprland #
+############
+rm -rf "${XDG_CONFIG_HOME}/hypr"
+ln -sf "${DOTFILES}/hypr" "${XDG_CONFIG_HOME}"
 
-######
-# i3 #
-######
-rm -rf "${XDG_CONFIG_HOME}/i3"
-ln -sf "${DOTFILES}/i3" "${XDG_CONFIG_HOME}"
-
-#################
-# i3status-rust #
-#################
-rm -rf "${XDG_CONFIG_HOME}/i3status-rust"
-ln -sf "${DOTFILES}/i3status-rust" "${XDG_CONFIG_HOME}/"
+##########
+# waybar #
+##########
+rm -rf "${XDG_CONFIG_HOME}/waybar"
+ln -sf "${DOTFILES}/waybar" "${XDG_CONFIG_HOME}"
 
 #######
 # zsh #
@@ -90,14 +84,3 @@ ln -sf "${DOTFILES}/gnupg/gpg-agent.conf" "${HOME}/.gnupg/"
 #######
 mkdir -p "${XDG_CONFIG_HOME}/git"
 ln -f "${DOTFILES}/git/config" "${XDG_CONFIG_HOME}/git"
-
-#############
-# autorandr #
-#############
-rm -rf "${XDG_CONFIG_HOME}/autorandr"
-ln -sf "${DOTFILES}/autorandr" "${XDG_CONFIG_HOME}"
-
-############
-# keyboard #
-############
-localectl --no-convert set-x11-keymap eu,ru pc105 , grp:caps_toggle,grp_led:caps

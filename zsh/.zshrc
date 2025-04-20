@@ -81,8 +81,9 @@ fi
 #############
 # AUTOSTART #
 #############
-if [[ "$(tty)" = "/dev/tty1" ]]; then
+
+if uwsm check may-start && uwsm select; then
   source /usr/share/nvm/init-nvm.sh
-  pgrep i3 || exec startx "${XDG_CONFIG_HOME}/X11/.xinitrc"
+	exec uwsm start default
 fi
 
