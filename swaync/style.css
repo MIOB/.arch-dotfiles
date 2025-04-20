@@ -1,14 +1,9 @@
+@import '../hypr/theme/colors.css';
+
 * {
   font-family: "JetBrains Mono Nerd Font";
   font-weight: bold;
 }
-@define-color bg #262a32;
-@define-color fg #d8dee8;
-@define-color gr #545d70;
-@define-color red #f7768e;
-@define-color green #b9f27c;
-@define-color blue #4b4e6f;
-@define-color cyan #0db9d7;
 
 .control-center .notification-row:focus,
 .control-center .notification-row:hover {
@@ -44,7 +39,7 @@
 
 
 .close-button {
-  background: #f7768e;
+  background: @red;
   color: @bg;
   text-shadow: none;
   padding: 0;
@@ -55,7 +50,7 @@
 
 .close-button:hover {
   box-shadow: none;
-  background: #f7768e;
+  background: @red;
   transition: all .15s ease-in-out;
   border: none
 }

@@ -1,11 +1,9 @@
+@import '.config/hypr/theme/colors.css';
+
 * {
   font-family: JetBrainsMono;
   font-size: 18px;
 }
-
-@define-color bg #2f343f;
-@define-color fg #d8dee8;
-@define-color fg_2 #d8dee8;
 
 window {
   background-color: @bg;
@@ -47,7 +45,7 @@ window {
 
 #entry:selected {
   border-radius: 5px;
-  background-color: @fg_2;
+  background-color: @fg;
   color: @bg;
 }
 
