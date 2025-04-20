@@ -1,5 +1,7 @@
 call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
   Plug 'junegunn/fzf.vim'
+  Plug 'gko/vim-coloresque'
+  Plug 'mg979/vim-visual-multi'
 call plug#end()
 
 set clipboard+=unnamedplus
