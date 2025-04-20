@@ -54,11 +54,16 @@ window#waybar {
 #backlight,
 #language,
 #clock,
-#tray {
+#tray,
+#notification {
   padding: 0 10px;
   margin: 0 6px;
   color: @fg;
   background-color: @bg;
+}
+
+#language {
+  min-width: 25px;
 }
 
 #idle_inhibitor.activated {
