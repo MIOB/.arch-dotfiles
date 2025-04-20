@@ -82,8 +82,8 @@ fi
 # AUTOSTART #
 #############
 
-if uwsm check may-start && uwsm select; then
+if uwsm check may-start; then
   source /usr/share/nvm/init-nvm.sh
-	exec uwsm start default
+	exec uwsm start hyprland.desktop
 fi
 
