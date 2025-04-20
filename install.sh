@@ -19,6 +19,12 @@ ln -sf "${DOTFILES}/hypr" "${XDG_CONFIG_HOME}"
 rm -rf "${XDG_CONFIG_HOME}/waybar"
 ln -sf "${DOTFILES}/waybar" "${XDG_CONFIG_HOME}"
 
+########
+# wofi #
+########
+rm -rf "${XDG_CONFIG_HOME}/wofi"
+ln -sf "${DOTFILES}/wofi" "${XDG_CONFIG_HOME}"
+
 #######
 # zsh #
 #######
