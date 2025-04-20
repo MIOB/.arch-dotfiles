@@ -18,7 +18,6 @@
     "idle_inhibitor",
     "pulseaudio",
     "network",
-    "power-profiles-daemon",
     "backlight",
     "hyprland/language",
     "clock",
