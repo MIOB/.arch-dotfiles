@@ -55,7 +55,7 @@ window#waybar {
 #language,
 #clock,
 #tray,
-#notification {
+#custom-notification {
   padding: 0 10px;
   margin: 0 6px;
   color: @fg;

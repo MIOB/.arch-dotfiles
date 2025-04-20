@@ -25,6 +25,12 @@ ln -sf "${DOTFILES}/waybar" "${XDG_CONFIG_HOME}"
 rm -rf "${XDG_CONFIG_HOME}/wofi"
 ln -sf "${DOTFILES}/wofi" "${XDG_CONFIG_HOME}"
 
+##########
+# swaync #
+##########
+rm -rf "${XDG_CONFIG_HOME}/swaync"
+ln -sf "${DOTFILES}/swaync" "${XDG_CONFIG_HOME}"
+
 #######
 # zsh #
 #######
