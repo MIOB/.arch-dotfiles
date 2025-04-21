@@ -5,321 +5,95 @@
   font-weight: bold;
 }
 
-.control-center .notification-row:focus,
-.control-center .notification-row:hover {
-  opacity: 1;
-  background: @bg;
-  border-radius: 10px
-}
-
-.notification-row {
-  outline: none;
-  margin: 0px;
-}
+@define-color text-color @fg;
+@define-color noti-border-color @border2;
+@define-color noti-internal-border-color rgba(255, 255, 255, 0.15);
+@define-color noti-bg alpha(@bg, 0.7);
+@define-color noti-bg-hover @bg;
+@define-color noti-action-bg alpha(@bg, 0.8);
+@define-color noti-action-bg-hover @bg;
+@define-color noti-close-bg @color9;
+@define-color noti-close-bg-hover @color1;
+@define-color noti-critical-bg rgb(255, 0, 0);
+@define-color noti-switch-checked @color10;
 
 .notification {
-	border-radius: 10px;
+  border: 2px solid @noti-border-color;
 }
 
-.notification-content{
-  color: @fg;
-  background: @bg;
-  padding: 3px 10px;
-  border-radius: 10px;
-  border: 1px solid @cyan;
-  margin: 0px;
-  min-height: 27px;
+.notification-content {
+  background-color: transparent;
+  padding: 10px 10px 10px 10px;
 }
 
-.notification-default-action {
-  margin: 5px;
-  padding: 0;
-  border-radius: 10px;
-}
-
-
-.close-button {
-  background: @red;
-  color: @bg;
-  text-shadow: none;
-  padding: 0;
-  border-radius: 10px;
-  margin-top: 5px;
-  margin-right: 5px;
-}
-
-.close-button:hover {
-  box-shadow: none;
-  background: @red;
-  transition: all .15s ease-in-out;
-  border: none
+.notification-content:hover {
+  background-color: @noti-bg-hover;
 }
 
 .notification-action {
-  background: @bg;
-  border: 1px solid @cyan;
-  border-top: none;
-  border-radius: 10px;
+  background-color: @noti-action-bg;
+  border-top: 1px solid @noti-internal-border-color;
+  border-right: 1px solid @noti-internal-border-color;
 }
 
-.notification-default-action:hover,
 .notification-action:hover {
-  color: @fg;
-  background: @bg
+  background-color: @noti-action-bg-hover;
 }
 
-.notification-default-action:not(:only-child) {
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px
+.notification.critical {
+  border: 2px solid @noti-critical-bg;
 }
 
-.inline-reply {
-  margin-top: 8px
-}
-
-.inline-reply-entry {
-  background: @bg;
-  color: @fg;
-  caret-color: @fg;
-  border: 1px solid @cyan;
-  border-radius: 10px
-}
-
-.inline-reply-button {
-	font-size: 0.5rem;
-  margin-left: 4px;
-  background: @bg;
-  border: 1px solid @cyan;
+.close-button {
+  background: @noti-close-bg;
   border-radius: 10px;
-  color: @fg;
+  margin-top: 10px;
 }
 
-.inline-reply-button:disabled {
-  background: initial;
-  color: @fg;
-  border: 1px solid transparent
+.close-button:hover {
+  background: @noti-close-bg-hover;
+  transition: all .15s ease-in-out;
 }
 
-.inline-reply-button:hover {
-  background: @bg;
+.widget-dnd > switch {
+  border: 2px solid @noti-internal-border-color;
 }
 
-.body-image {
-  margin-top: 6px;
-  color: @fg;
-  border-radius: 10px
+.widget-dnd > switch:checked {
+ background-color: @noti-switch-checked;
 }
 
-.summary {
-  font-size: 1rem;
-  font-weight: bold;
-  background: transparent;
-  color: @fg;
-  text-shadow: none
-}
-
-.time {
-  font-size: 1rem;
-  font-weight: bold;
-  background: transparent;
-  color: @fg;
-  text-shadow: none;
-  margin-right: 18px
-}
-
-.body {
-  font-size: 1rem;
-  font-weight: bold;
-  background: transparent;
-  color: @fg;
-  text-shadow: none
-}
-
-.control-center {
-  background: @bg;
-  border: 1px solid @cyan;
-	color: @fg;
-  border-radius: 10px;
-}
-
-.control-center-list {
-  background: transparent
-}
-
-.control-center-list-placeholder {
-  opacity: 0.5
-}
-
-.floating-notifications {
-  background: transparent;
-}
-
-.blank-window {
-  background: alpha(black, 0.1)
-}
-
-.widget-title {
-  color: @fg;
-  background: @bg;
-  padding: 3px 6px;
-  margin: 5px;
-  font-size: 1rem;
-  border-radius: 10px;
-}
-
-.widget-title>button {
-  font-size: 0.75rem;
-  color: @fg;
-  border-radius: 10px;
-	background: transparent;
-	border: 0.5px solid @cyan;
-}
-
-.widget-title>button:hover {
-  background: @fg;
-  color: red;
-}
-
-.widget-dnd {
-  background: @bg;
-  padding: 3px 6px;
-  margin: 5px;
-  border-radius: 10px;
-  font-size: 1rem;
-  color: @cyan;
-}
-
-.widget-dnd>switch {
-  border-radius: 10px;
-  border: 1px solid #7aa2f7;
-  background: @cyan;
-}
-
-.widget-dnd>switch:checked {
-  background: #f7768e;
-  border: 1px solid #f7768e;
-}
-
-.widget-dnd>switch slider {
-  background: @bg;
-  border-radius: 10px
-}
-
-.widget-dnd>switch:checked slider {
-  background: @bg;
-  border-radius: 10px
-}
-
-.widget-label {
-  margin: 5px;
-}
-
-.widget-label>label {
-  font-size: 1rem;
-  color: @fg;
-}
-
-.widget-mpris {
-  color: @fg;
-  background: @bg;
-  padding: 3px 6px;
-  margin: 5px;
-  border-radius: 10px;
-}
-
-.widget-mpris > box > button {
-  border-radius: 10px;
-}
-
-.widget-mpris-player {
-  padding: 3px 6px;
-  margin: 5px;
-}
-
-.widget-mpris-title {
-  font-weight: 100;
-  font-size: 1rem
-}
-
-.widget-mpris-subtitle {
-  font-size: 0.75rem
+.widget-dnd > switch slider {
+  box-shadow: none;
 }
 
 .widget-buttons-grid {
-  font-size: large;
-	color: @cyan;
-  padding: 2px;
-  margin: 5px;
-  border-radius: 10px;
-  background: @bg;
+  background: transparent;
 }
 
-.widget-buttons-grid>flowbox>flowboxchild>button {
-  margin: 1px;
-  background: @bg;
-  border-radius: 10px;
-  color: @fg;
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  color: @text-color;
+  background: @noti-bg;
+  border: 2px solid @noti-internal-border-color;
+  box-shadow: none;
+  font-size: 20px;
 }
 
-.widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background: @fg;
-  color: @bg;
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: @noti-bg-hover;
 }
 
-.widget-menubar>box>.menu-button-bar>button {
-  border: none;
-  background: transparent
+.widget-title > button {
+  border: 2px solid @noti-internal-border-color;
 }
 
-.topbar-buttons>button {
-  border: none;
-  background: transparent
+.notification-group-buttons button {
+  color: @text-color;
+  background: @noti-bg;
+  border: 2px solid @noti-internal-border-color;
+  box-shadow: none;
 }
 
-.widget-volume {
-  background: @bg;
-  padding: 2px;
-  margin: 10px 10px 5px 10px;
-  border-radius: 10px;
-  font-size: x-large;
-  color: @fg;
-}
-
-.widget-volume>box>button {
-  background: @cyan;
-  border: none
-}
-
-.per-app-volume {
-  background-color: @bg;
-  padding: 4px 8px 8px;
-  margin: 0 8px 8px;
-  border-radius: 10px;
-	color: @fg;
-}
-
-.widget-backlight {
-  background: @bg;
-  padding: 5px;
-  margin: 10px 10px 5px 10px;
-  border-radius: 10px;
-  font-size: x-large;
-  color: @fg;
-}
-
-.low {
-  padding: 0px;
-  border-radius: 10px;
-}
-
-.normal {
-  padding: 0px;
-  border-radius: 10px;
-}
-
-.critical {
-  background: @red;
-  padding: 0px;
-  border-radius: 10px;
-  border: 1px solid @red;
+.notification-group-buttons button:hover {
+  background: @noti-bg-hover;
 }

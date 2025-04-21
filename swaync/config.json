@@ -64,7 +64,7 @@
       "actions": [
         {
           "label": "󰐥",
-          "command": "systemctl halt"
+          "command": "systemctl poweroff -i"
         },
         {
           "label": "󰌾",
