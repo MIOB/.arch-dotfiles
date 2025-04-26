@@ -1,0 +1,84 @@
+@import "../../hypr/colors/everforest-dark.css";
+
+* {
+  font-family: JetBrainsMono Nerd Font, FontAwesome;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: @fg;
+  color: @bg0;
+  transition-property: background-color;
+  transition-duration: .5s;
+  border-radius: 0px 0px 15px 15px;
+
+  border-bottom-width: 5px;
+  border-bottom-color: #7d6a40;
+  border-bottom-style: solid;
+}
+
+#cpu,
+#memory,
+#battery,
+#workspaces,
+#idle_inhibitor,
+#pulseaudio,
+#network,
+#language,
+#clock,
+#custom-notification,
+#tray {
+  background-color: @bg0;
+  color: @fg;
+
+  padding:0 10px;
+  margin-top: 7px;
+  margin-bottom: 12px;
+	border-radius: 10px;
+
+  border-bottom-width: 5px;
+  border-bottom-color: #161a1d;
+  border-bottom-style: solid;
+}
+
+#idle_inhibitor {
+  margin-left: 10px;
+}
+
+#tray {
+  margin-right: 10px;
+}
+
+#workspaces {
+  padding: 0;
+}
+
+#workspaces button {
+  color: @fg;
+  margin: 0;
+  border-radius: 10px;
+}
+
+#workspaces button.active {
+  background-color: @blue;
+  color: @bg0;
+}
+
+#workspaces button.urgent {
+  color: @red;
+}
+
+#workspaces button:hover {
+  background-color: @yellow;
+  color: @bg0;
+  background-image: none;
+  border-color: rgba(0,0,0,0);
+  text-shadow: none;
+  box-shadow: none;
+}
+
+#idle_inhibitor.activated {
+  background-color: @red;
+  color: @bg0;
+}
