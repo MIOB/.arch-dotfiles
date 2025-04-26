@@ -6,7 +6,7 @@
 }
 
 window {
-  background-color: @bg;
+  background-color: alpha(@bg, 0.9999);
   border-radius: 15px;
 }
 
