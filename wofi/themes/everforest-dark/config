@@ -1,0 +1,12 @@
+width=20%
+height=40%
+columns=1
+
+allow_images=true
+image_size=30
+hide_scroll=true
+prompt=Search
+no_actions=true
+
+insensitive=true
+term=alacritty
